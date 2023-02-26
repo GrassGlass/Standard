@@ -1,0 +1,34 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Thms}
+
+\newtcbtheorem[auto counter,number within=section]{theorem}{Theorem}{
+colback=orange!15,
+oversize=2pt,
+fontupper=\itshape,
+colframe=blue,
+colbacktitle=blue,
+enhanced,
+fonttitle=\bfseries,
+attach boxed title to top left={xshift=3mm,yshift=-3mm,yshifttext=-1mm},}{thm}
+
+\newtcbtheorem[use counter from=theorem]{corollary}{Corollary}{
+colback=pink!25,
+oversize=2pt,
+fontupper=\itshape,
+colframe=orange!15,
+colbacktitle=pink!40,
+enhanced,
+fonttitle=\bfseries,
+coltitle=black,
+attach boxed title to top left={xshift=3mm,yshift=-3mm,yshifttext=-1mm},}{cor}
+
+\newtcbtheorem[use counter from=theorem]{lemma}{Lemma}{
+colback=yellow!15,
+oversize=2pt,
+fontupper=\itshape,
+colframe=orange!15,
+colbacktitle=yellow!25,
+enhanced,
+fonttitle=\bfseries,
+coltitle=black,
+attach boxed title to top left={xshift=3mm,yshift=-3mm,yshifttext=-1mm},}{lem}

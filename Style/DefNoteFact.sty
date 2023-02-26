@@ -1,0 +1,41 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{DefNoteFact}
+
+\newtcbtheorem{definition}{Definition}{
+colback=black!5,
+oversize=2pt,
+colframe=white!75!black,
+colbacktitle=white!95!black,
+coltitle=white,
+enhanced,
+fonttitle=\bfseries,
+attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+title=Definition,
+coltitle=black,
+arc=10pt,}{def}
+
+\newtcolorbox{fact}{
+  colback=white,
+  oversize=2pt,
+  colframe=white!75!black,
+  colbacktitle=white,
+  coltitle=black,
+  enhanced,
+  attach boxed title to top right={xshift=-3mm,yshift=-3mm,yshifttext=-1mm},
+  fonttitle=\itshape,
+  title=Fact,
+  arc=3mm,
+  arc is angular}
+
+\newtcolorbox{note}{
+  colback=white,
+  oversize=2pt,
+  colframe=white!75!black,
+  colbacktitle=white,
+  coltitle=black,
+  enhanced,
+  attach boxed title to top right={xshift=-3mm,yshift=-3mm,yshifttext=-1mm},
+  fonttitle=\itshape,
+  title=Note,
+  arc=3mm,
+  arc is angular}

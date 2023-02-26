@@ -1,0 +1,33 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{boxes}
+
+\newtcolorbox{lbox}[2][]{
+colback=white,
+oversize=2pt,
+colframe=blue!70,
+colbacktitle=blue!70,
+coltitle=white,
+enhanced,
+attach boxed title to top left={xshift=3mm,yshift=-3mm,yshifttext=-1mm},
+title={#2},#1}
+
+
+\newtcolorbox{cbox}[2][]{
+  colback=white,
+  oversize=2pt,
+  colframe=blue!70,
+  colbacktitle=blue!70,
+  coltitle=white,
+  enhanced,
+  attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+  title={#2},#1}
+
+\newtcolorbox{rbox}[2][]{
+  colback=white,
+  oversize=2pt,
+  colframe=blue!70,
+  colbacktitle=blue!70,
+  coltitle=white,
+  enhanced,
+  attach boxed title to top right={xshift=-3mm,yshift=-3mm,yshifttext=-1mm},
+  title={#2},#1}

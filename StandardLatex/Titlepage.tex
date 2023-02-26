@@ -1,0 +1,23 @@
+\begin{titlepage}
+    \frontmatter
+    \begin{tikzpicture}[font=\sffamily,remember picture,overlay]
+        \node[fill=Goldenrod,anchor=north, minimum width=\paperwidth, minimum height=2cm] (names)
+     at ([yshift=-3cm]current page.north) {
+      \begin{tabular}{c}
+          \\
+          \color{blue} {\fontsize{24.88pt}{65pt}\selectfont Document Title}\\[2mm]
+          \color{blue} {\fontsize{10pt}{10pt}\selectfont By Author / Whatever}\\
+          \\
+          \Large \color{blue}{Name}\\
+          \\
+      \end{tabular}
+      };
+    \end{tikzpicture}
+
+\begingroup
+\let\clearpage\relax
+\vspace{5cm}
+\tableofcontents
+\endgroup
+\mainmatter
+\end{titlepage}

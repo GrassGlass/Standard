@@ -1,0 +1,26 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{QnsProof}
+
+\newtheorem{Qns}{}[subsection]
+\renewcommand{\theQns}{\arabic{Qns}}
+\tcolorboxenvironment{Qns}{
+  enhanced, frame hidden, borderline west = {1pt}{0pt}{blue!50},
+  colback=blue!10,
+  coltext=black,
+  boxrule=1pt,
+  boxsep=1pt,
+  before skip=\topsep,
+  after skip=\topsep,
+}
+
+\tcolorboxenvironment{proof}{
+  enhanced, frame hidden, borderline west = {1pt}{0pt}{red!50},
+  breakable,
+  pad at break=2mm,
+  colback=red!10,
+  coltext=black,
+  boxrule=1pt,
+  boxsep=1pt,
+  before skip=\topsep,
+  after skip=\topsep,
+}

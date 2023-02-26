@@ -1,0 +1,57 @@
+\documentclass[oneside]{book}
+\usepackage{../Style/Master}
+\usepackage{../Style/boxes}
+\usepackage{../Style/DefNoteFact}
+\usepackage{../Style/QnsProof}
+\usepackage{../Style/Thms}
+
+\begin{document}
+
+\input{Titlepage.tex}
+
+\raggedright
+
+\chapter{Chapter 1}
+\section{Section 1}
+\begin{theorem}{My Theorem!}{}
+    Hi
+\end{theorem}
+\begin{lemma}{My Lemma!}{}
+    lemma
+\end{lemma}
+\begin{corollary}{My Corollary!}{}
+    corollary
+\end{corollary}
+\begin{definition}{\textit{Insert Definiton}}{}
+    Hi
+\end{definition}
+\begin{note}
+    Hi
+\end{note}
+\begin{fact}
+    Hi
+\end{fact}
+\begin{Qns}
+    Hi
+\end{Qns}
+\begin{proof}
+    Insert proof here.
+\end{proof}
+\begin{lbox}[colback=white]{Title}
+    This is my own lbox with a mandatory title
+    and options.
+\end{lbox}
+\begin{cbox}[colback=white]{Title}
+    This is my own cbox with a mandatory title
+    and options.
+\end{cbox}
+\begin{rbox}[colback=white]{Title}
+    This is my own rbox with a mandatory title
+    and options.
+\end{rbox}
+More info on how to use tcolorbox: \url{https://texdoc.org/serve/tcolorbox.pdf/0}.
+
+\newpage 
+Hello
+
+\end{document}

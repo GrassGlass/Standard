@@ -1,0 +1,100 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Master}
+
+\RequirePackage[utf8]{inputenc}
+\makeatletter
+\DeclareRobustCommand{\rvdots}{%
+  \vbox{
+    \baselineskip4\p@\lineskiplimit\z@
+    \kern-\p@
+    \hbox{.}\hbox{.}\hbox{.}
+  }}
+\makeatother
+\RequirePackage[outline]{contour}
+\RequirePackage{environ}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{tikz}
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary{cd}
+\NewEnviron{elaboration}{
+\par
+\begin{tikzpicture}
+\node[rectangle,minimum width=\linewidth] (m) {\begin{minipage}{\linewidth}\BODY\end{minipage}};
+\draw[dashed] (m.south west) rectangle (m.north east);
+\end{tikzpicture}
+}
+\RequirePackage{cancel}
+\RequirePackage{stackengine}
+\newcommand\lbr{%
+  \ensurestackMath{\stackengine{0pt}{\lfloor}{\lceil}{O}{c}{F}{F}{L}}}
+\newcommand\rbr{%
+  \ensurestackMath{\stackengine{0pt}{\rfloor}{\rceil}{O}{c}{F}{F}{L}}}
+\RequirePackage[normalem]{ulem}
+\newcommand\hlg{\bgroup\markoverwith
+  {\textcolor{green}{\rule[-.5ex]{2pt}{2.5ex}}}\ULon}
+  \newcommand\hly{\bgroup\markoverwith
+  {\textcolor{yellow}{\rule[-.5ex]{2pt}{2.5ex}}}\ULon}
+\RequirePackage{mathrsfs}  
+\RequirePackage{amsmath}
+\makeatletter
+\newcommand{\leqnomode}{\tagsleft@true}
+\newcommand{\reqnomode}{\tagsleft@false}
+\makeatother
+\makeatletter
+\newcommand{\ineq}{\mathrel{\text{\in@eq}}}
+\newcommand{\in@eq}{%
+  \oalign{%
+    \hidewidth$\m@th\in$\hidewidth\cr
+    \noalign{\nointerlineskip\kern1ex}%
+    $\m@th\smash{-}$\cr
+    \noalign{\nointerlineskip\kern-.5ex}%
+  }%
+}
+\newcommand{\notineq}{\mathrel{\text{\notin@eq}}}
+\newcommand{\notin@eq}{%
+  \oalign{%
+    \hidewidth$\m@th\notin$\hidewidth\cr
+    \noalign{\nointerlineskip\kern1ex}%
+    $\m@th\smash{-}$\cr
+    \noalign{\nointerlineskip\kern-.5ex}%
+  }%
+}
+\makeatother
+\RequirePackage[many]{tcolorbox}
+\RequirePackage{mathtools}
+\RequirePackage{amssymb}
+\RequirePackage{amsfonts}
+\RequirePackage{amsthm}
+
+\RequirePackage{ stmaryrd }
+\RequirePackage{ mathrsfs }
+\RequirePackage{graphicx}
+\graphicspath{ {./images/} }
+\RequirePackage{enumitem}
+
+\RequirePackage[pagestyles]{titlesec}
+\titleformat{\chapter}[display]   
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\huge}
+\newpagestyle{mystyle}
+{\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
+
+\renewcommand\thesection{\thechapter.\arabic{section}}
+\renewcommand\thechapter{\arabic{chapter}}
+
+
+\RequirePackage{geometry}
+\geometry{
+  bottom=15mm
+}
+
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    }
+\renewcommand{\thefootnote}{\arabic{footnote}}	
+\RequirePackage{subfiles}
